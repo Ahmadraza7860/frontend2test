@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file here -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styles */
+        #studentForm {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 100%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #studentForm label,
+        #studentForm input,
+        #studentForm button {
+            margin-bottom: 10px;
+            margin: 10px;
+        }
+
+       
+        #studentForm input {
+            width: 100%;
+            margin-right: 5px;
+            margin-left: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: black;
+            color: white;
+        }
+
+        #submitBtn {
+            grid-column: 1 / -1;
+            /* Span the full width of the grid */
+            background-color: #ecf3ec;
+            color: #150202;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        /* Table Styles */
+        #studentTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #studentTable th,
+        #studentTable td {
+            border: 1px solid #969191;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #studentTable th {
+            background-color: #060000;
+        }
+
+        /* Search Box Styles */
+        #searchInput {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: black;
+        }
+
+        /* Edit and Delete Icons Styles */
+        .edit-icon,
+        .delete-icon {
+            cursor: pointer;
+        }
+
+        /* Add some hover effect for the icons */
+        .edit-icon:hover,
+        .delete-icon:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Management CRUD</h1>
+
+    <!-- Form to Add/Edit Students -->
+    <form id="studentForm">
+
+        
+        <input type="text" id="name" required placeholder="Name">
+       
+        <input type="email" id="email" required placeholder="Email">
+        
+        <input type="number" id="gpa" required placeholder="GPA">
+       
+        <input type="number" id="age" required placeholder="Age">
+        
+        <input type="text" id="degree" required placeholder="Degree">
+        <button type="submit" id="submitBtn">Add Student</button>
+    </form>
+
+    <!-- Search Box -->
+    <input type="text" id="searchInput" placeholder="Search by name, email, or degree">
+
+    <!-- Table to Display Students -->
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>GPA</th>
+                <th>Age</th>
+                <th>Degree</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Student rows will be dynamically added here using JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="test.js"></script> <!-- Add your JavaScript file here -->
+</body>
+
+</html>
